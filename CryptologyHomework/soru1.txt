@@ -1,0 +1,1 @@
+Birisine mail göndermek kolay bir işlemdir ama yanlış kişiye gönderilen mailleri ise geri almak çok zordur. Bu durumda gönderilen maile önemli bilgileri sadece gönderen ve alıcının bildiği özel bir şifreleme sistemi ile şifreleyerek mailde ki bilgilerin istenmeyen 3. Kişilerin eline ulaşmasını engelleriz.
