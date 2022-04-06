@@ -16,6 +16,9 @@ struct ContentView: View {
     
     @State var user: User = User(password: "", capacity: 512)
     
+    @State private var activateAlert: Bool = false
+    @State private var alertText: String = ""
+    
     var body: some View {
         VStack {
             
@@ -91,6 +94,9 @@ struct ContentView: View {
                 }
             }
         }
+        .alert(isPresented: $activateAlert) {
+            Alert(title: Text("Dikkat"), message: Text(LocalizedStringKey(alertText)), dismissButton: .cancel())
+        }
         .padding(.horizontal, 20)
     }
     
@@ -123,7 +129,8 @@ struct ContentView: View {
         
         if UserDefaults.standard.string(forKey: "Username") == self.username {
             if UserDefaults.standard.string(forKey: "Password") == user.password {
-                print("LOGIN")
+                alertText = "Giriş başarılı."
+                activateAlert.toggle()
             }
         }
     }

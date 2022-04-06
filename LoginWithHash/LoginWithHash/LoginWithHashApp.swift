@@ -12,6 +12,7 @@ struct LoginWithHashApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+//            CustomMD5()
         }
     }
 }
